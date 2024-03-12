@@ -1,0 +1,9 @@
+filebeat.inputs:
+- type: log
+  paths:
+    - /logs/*.csv
+  fields:
+    document_type: csv
+
+output.logstash:
+  hosts: ["logstash:5044"]
